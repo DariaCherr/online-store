@@ -1,3 +1,11 @@
+const heading = document.querySelector(".heading");
+
+function makeVisible() {
+    heading.classList.add("visible");
+}
+
+setInterval(() => { makeVisible(heading) }, 300);
+
 const tours = [{
         title: "Турция",
         description: "10 дней в Турции на море, что может быть лучше? Вас ожидает отличный сервис и древняя восточная культура. Мы подобрали для вас выгодные туры и путевки на 10 дней с комфортными отелями, удобным перелетом и качественным сервисом от нашей компании.",

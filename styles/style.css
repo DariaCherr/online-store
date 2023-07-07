@@ -22,7 +22,7 @@ body {
 }
 
 .header-container {
-    max-width: 1920px;
+    max-width: 1900px;
     margin: 0 auto;
     width: 100%;
     padding: 10px 90px;
@@ -39,7 +39,20 @@ a {
     line-height: 46px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.nav-link:not(:last-child) {
+    margin-right: 100px;
+}
+
+.nav-link {
+    transition: 1s;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid #000;
+    transform: scale(1.1);
 }
 
 .logo {
@@ -57,15 +70,34 @@ a {
     padding: 250px 50px 200px;
 }
 
-.banner h1 {
+.heading {
     font-size: 2rem;
     margin-bottom: 30px;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: 1s;
+}
+
+.visible {
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .container {
     width: 1200px;
     margin: 0 auto;
     position: relative;
+}
+
+#sort {
+    height: 25px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    outline: none;
+}
+
+#sort:hover {
+    border: 2px solid #007FFF;
 }
 
 .site-search {
@@ -79,6 +111,11 @@ a {
     width: 600px;
     height: 40px;
     padding-left: 20px;
+    outline: none;
+}
+
+.site-search input:hover {
+    border: 2px solid #007FFF;
 }
 
 .site-search button {
@@ -87,6 +124,11 @@ a {
     border-radius: 0 4px 4px 0;
     border-left: 0;
     width: 55px;
+    cursor: pointer;
+}
+
+.site-search button:hover {
+    background: #cfddf3;
 }
 
 .filters {
@@ -112,6 +154,10 @@ a {
     flex-direction: column;
     position: relative;
     border: 1px solid;
+    transition: 1s;
+    &:hover {
+        transform: scale(1.02);
+    }
 }
 
 .shop-item .content {
