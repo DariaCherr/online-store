@@ -134,6 +134,12 @@ a {
     cursor: pointer;
 }
 
+@media screen and (max-width: 637px) {
+    .site-search button {
+        padding: 0 5px;
+    }
+}
+
 .site-search button:hover {
     background: #cfddf3;
 }
