@@ -25,9 +25,16 @@ body {
     max-width: 1900px;
     margin: 0 auto;
     width: 100%;
-    padding: 10px 90px;
+    padding: 10px 80px;
     display: flex;
     justify-content: space-around;
+}
+
+@media screen and (max-width: 575px) {
+    .header-container {
+        padding: 10px 20px;
+        flex-direction: column;
+    }
 }
 
 a {
@@ -43,7 +50,7 @@ a {
 }
 
 .nav-link:not(:last-child) {
-    margin-right: 100px;
+    margin-right: 80px;
 }
 
 .nav-link {
@@ -84,7 +91,7 @@ a {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
 }
@@ -140,14 +147,39 @@ a {
 }
 
 #shop-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: grid;
     gap: 20px;
+    grid-template-columns: repeat(4, 320px);
+    justify-content: center;
+}
+
+@media screen and (max-width: 1385px) {
+    #shop-items {
+        grid-template-columns: repeat(3, 320px);
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    #shop-items {
+        grid-template-columns: repeat(3, 260px);
+    }
+}
+
+@media screen and (max-width: 842px) {
+    #shop-items {
+        grid-template-columns: repeat(2, 270px);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #shop-items {
+        grid-template-columns: repeat(1, 320px);
+        padding: 0 10px;
+    }
 }
 
 .shop-item {
-    width: calc(25% - 17px);
+    max-width: 320px;
     border-radius: 4px;
     overflow: hidden;
     display: flex;
@@ -157,6 +189,7 @@ a {
     transition: 1s;
     &:hover {
         transform: scale(1.02);
+        cursor: pointer;
     }
 }
 
