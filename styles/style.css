@@ -77,6 +77,12 @@ a {
     padding: 250px 50px 200px;
 }
 
+@media screen and (max-width: 575px) {
+    .banner {
+        padding: 150px 50px 100px;
+    }
+}
+
 .heading {
     font-size: 2rem;
     margin-bottom: 30px;
